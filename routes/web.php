@@ -73,3 +73,10 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 //PhotoController
 Route::resource('photos', PhotoController::class);
+
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Adri']);
+//     });
+
+Route::get('/greeting', [WelcomeController::class,
+    'greeting']);
